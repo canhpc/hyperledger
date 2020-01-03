@@ -12,7 +12,7 @@ peer:
 
     # The peer id provides a name for this peer instance and is used when
     # naming docker resources.
-    id: org1.peer2
+    id: org1.peer1
 
     # The networkId allows for logical separation of networks and is used when
     # naming docker resources.
@@ -20,7 +20,7 @@ peer:
 
     # The Address at local network interface this Peer will listen on.
     # By default, it will listen on all network interfaces
-    listenAddress: peer2:7051
+    listenAddress: peer1:7051
 
     # The endpoint this peer uses to listen for inbound chaincode connections.
     # If this is commented-out, the listen address is selected to be
@@ -37,7 +37,7 @@ peer:
     # in the same organization. For peers in other organization, see
     # gossip.externalEndpoint for more info.
     # When used as CLI config, this means the peer's endpoint to interact with
-    address: peer2:7051
+    address: peer1:7051
 
     # Whether the Peer should programmatically determine its address
     # This case is useful for docker containers.
@@ -159,7 +159,7 @@ peer:
         reconnectInterval: 25s
         # This is an endpoint that is published to peers outside of the organization.
         # If this isn't set, the peer will not be known to other organizations.
-        externalEndpoint: peer2:7051
+        externalEndpoint:
         # Leader election service configuration
         election:
             # Longest time peer waits for stable membership during leader election startup (unit: second)
@@ -299,7 +299,7 @@ peer:
         #     Security:
 
     # Path on the file system where peer will find MSP local configurations
-    mspConfigPath: crypto-config/peerOrganizations/org1.themedium.io/peers/peer2.org1.themedium.io/msp
+    mspConfigPath: crypto-config/peerOrganizations/org1.themedium.io/peers/peer1.org1.themedium.io/msp
     
     # Identifier of the local MSP
     # ----!!!!IMPORTANT!!!-!!!IMPORTANT!!!-!!!IMPORTANT!!!!----
