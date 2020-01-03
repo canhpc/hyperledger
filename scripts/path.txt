@@ -1,0 +1,3 @@
+#the following line is set for fabric
+export FABRIC_CFG_PATH=~/workspace/fabric
+export PATH=$PATH:$FABRIC_CFG_PATH/bin

@@ -1,0 +1,12 @@
+# fabric network address
+192.168.65.1   peer0
+192.168.65.2   peer1
+192.168.65.3   peer2
+192.168.65.4   peer3
+192.168.65.5   peer4
+192.168.65.6   orderer0
+192.168.65.7   orderer1
+192.168.65.8   orderer2
+192.168.68.9   client0
+192.168.68.10  client1
+192.168.68.11  client2
