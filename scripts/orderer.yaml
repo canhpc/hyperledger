@@ -22,7 +22,7 @@ General:
     LedgerType: file
 
     # Listen address: The IP on which to bind to listen.
-    ListenAddress: 127.0.0.1
+    ListenAddress: orderer0
 
     # Listen port: The port on which to bind to listen.
     ListenPort: 7050
@@ -135,18 +135,18 @@ General:
             FileKeyStore:
                 KeyStore:
 
-        # Settings for the PKCS#11 crypto provider (i.e. when DEFAULT: PKCS11)
-        PKCS11:
-            # Location of the PKCS11 module library
-            Library:
-            # Token Label
-            Label:
-            # User PIN
-            Pin:
-            Hash:
-            Security:
-            FileKeyStore:
-                KeyStore:
+        # # Settings for the PKCS#11 crypto provider (i.e. when DEFAULT: PKCS11)
+        # PKCS11:
+        #     # Location of the PKCS11 module library
+        #     Library:
+        #     # Token Label
+        #     Label:
+        #     # User PIN
+        #     Pin:
+        #     Hash:
+        #     Security:
+        #     FileKeyStore:
+        #         KeyStore:
 
     # Authentication contains configuration parameters related to authenticating
     # client messages
@@ -382,8 +382,8 @@ Consensus:
 
     # WALDir specifies the location at which Write Ahead Logs for etcd/raft are
     # stored. Each channel will have its own subdir named after channel ID.
-    WALDir: /var/hyperledger/production/orderer/etcdraft/wal
+    WALDir: /home/medium/workspace/orderer/etcdraft/wal
 
     # SnapDir specifies the location at which snapshots for etcd/raft are
     # stored. Each channel will have its own subdir named after channel ID.
-    SnapDir: /var/hyperledger/production/orderer/etcdraft/snapshot
+    SnapDir: /home/medium/workspace/orderer/etcdraft/snapshot
