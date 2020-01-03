@@ -12,7 +12,7 @@ peer:
 
     # The peer id provides a name for this peer instance and is used when
     # naming docker resources.
-    id: jdoe
+    id: org1.peer2
 
     # The networkId allows for logical separation of networks and is used when
     # naming docker resources.
@@ -83,7 +83,7 @@ peer:
         # Important: The endpoints here have to be endpoints of peers in the same
         # organization, because the peer would refuse connecting to these endpoints
         # unless they are in the same organization as the peer.
-        bootstrap: peer1:7051
+        bootstrap: peer2:7051
 
         # NOTE: orgLeader and useLeaderElection parameters are mutual exclusive.
         # Setting both to true would result in the termination of the peer
@@ -159,7 +159,7 @@ peer:
         reconnectInterval: 25s
         # This is an endpoint that is published to peers outside of the organization.
         # If this isn't set, the peer will not be known to other organizations.
-        externalEndpoint:
+        externalEndpoint: peer2:7051
         # Leader election service configuration
         election:
             # Longest time peer waits for stable membership during leader election startup (unit: second)
